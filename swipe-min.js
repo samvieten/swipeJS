@@ -1,0 +1,2 @@
+!function(){var n=function(){var n=1e3,t=80,e=$(document),o=0,i=0,u="ontouchend"in document,a=u?"touchstart":"mousedown",c=u?"touchmove":"mousemove",r=u?"touchend":"mouseup";e.bind(a,function(n){i=n.timeStamp,o=n.originalEvent.touches?n.originalEvent.touches[0].pageX:n.pageX}).bind(r,function(){i=0,o=0}).bind(c,function(e){var u=e.originalEvent.touches?e.originalEvent.touches[0].pageX:e.pageX,a=0===o?0:Math.abs(u-o),c=e.timeStamp;if(0!==i&&n>c-i&&a>t){if(o>u)return"swipeLeft";if(u>o)return"swipeRight";i=0,o=0}})};n()}();
+//# sourceMappingURL=./swipe-min.js.map
